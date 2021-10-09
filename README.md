@@ -1,7 +1,6 @@
-# Computershare recruitment coding challenge
+# Finance demo
 
-Challenged to create a web app capable of displaying stocks, news, trading prices etc baes on the company ID.
-
+Originally created as a challenge for a job interview
 
 ## Example
 
@@ -20,13 +19,13 @@ Challenged to create a web app capable of displaying stocks, news, trading price
 Clone the project
 
 ```bash
-  git clone https://github.com/bruceyboy86/computershare-recruitment.git
+  git clone https://github.com/bruceyboy86/finance-demo.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd computershare-recruitment
+  cd finance-demo
 ```
 
 Install dependencies
@@ -59,9 +58,4 @@ Axios http client - https://www.npmjs.com/package/axios
 ## Authors and Acknowledgement
 
 - [@bruceyboy86](https://github.com/bruceyboy86/) for development and design.
-
-  
-## Feedback
-
-I got the job!
   

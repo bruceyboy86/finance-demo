@@ -5,6 +5,10 @@
     border:1px solid $light-card-background;
     border-radius: 0.3rem;
     background-color: $light-card-background;
+    &.companyInfo, &.companyShares {
+      position: relative;
+      top: 2em;
+    }
   }
   .card-img-top{
     position: relative;

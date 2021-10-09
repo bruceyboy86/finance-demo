@@ -7,10 +7,10 @@ const PriceCards = (props) => {
 
   // calculate the highest/lowest stock price using ternary so element can render without data
   const HighStockPrice = (data) => {
-    return <><span>{data.d ? Math.round(Math.max.apply(null, data.d)) : <Spinner animation="grow" />}</span></>
+    return <span>{data.d ? Math.round(Math.max.apply(null, data.d)) : <Spinner animation="grow" />}</span>
   }
   const LowStockPrice = (data) => {
-    return <>{data.d ? Math.round(Math.min.apply(null, data.d)) : <Spinner animation="grow" />}</>
+    return <span>{data.d ? Math.round(Math.min.apply(null, data.d)) : <Spinner animation="grow" />}</span>
   }
 
   // get average by reducing the array then divide by number of returned entries
@@ -21,7 +21,7 @@ const PriceCards = (props) => {
           return total ? total + num : null;
         }
       )
-      return <>{Math.round(average / data.d.length)}</>
+      return <span>{Math.round(average / data.d.length)}</span>
     }
     else {
       return <><Spinner animation="grow" /> </>
@@ -55,6 +55,13 @@ const PriceCards = (props) => {
           </Card.Body>
         </Card>
       </CardDeck>
+{/* 
+      <div id='stockRange'>
+        <LowStockPrice d={props.low} />
+        <AverageStockPrice d={props.close} />
+        <HighStockPrice d={props.close} />
+      </div> */}
+
     </>
   )
 }

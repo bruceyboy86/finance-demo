@@ -152,7 +152,7 @@ const SearchResults = () => {
           </Col>
           <Col md={6}>
             <Card>
-              <Card.Body>
+              <Card.Body className="companyShares">
                 <Card.Text>
                   <p className="outstandingShareTitle">Number of oustanding shares</p>
                   <p className="outstandingShare">{info.shareOutstanding}</p>
