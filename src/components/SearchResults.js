@@ -133,11 +133,31 @@ const SearchResults = () => {
           <Form.Row>
             <Col>
               <Form.Label>Company id</Form.Label>
-              <Form.Control
+              <input
+                list="browsers"
+                name="browser"
+                id="browser"
                 className="form-control rounded-pill search-input"
-                value={query}
                 onChange={(e) => setQuery(e.target.value.toUpperCase())}
               />
+              <datalist id="browsers">
+                <option value="AAPL"></option>
+                <option value="MSFT"></option>
+                <option value="AMZN"></option>
+                <option value="TSLA"></option>
+                <option value="GOOG"></option>
+                <option value="GOOGL"></option>
+                <option value="NVDA"></option>
+                <option value="FB"></option>
+                <option value="PYPL"></option>
+                <option value="NFLX"></option>
+                <option value="ADBE"></option>
+                <option value="CMCSA"></option>
+                <option value="CSCO"></option>
+                <option value="INTC"></option>
+                <option value="PEP"></option>
+                <option value="AVGO"></option>
+              </datalist>
             </Col>
             <Col>
               <Form.Label>Week ending on ...</Form.Label>
@@ -154,31 +174,28 @@ const SearchResults = () => {
       </div>
 
       <div id="infoAndShares">
-        
-          <Card id='infoCard'>
-            <Card.Body className="companyInfo">
-              <Card.Text>{info.name}</Card.Text>
-              <Card.Text>Country: {info.country}</Card.Text>
-              <Card.Text>Currency: {info.currency}</Card.Text>
-              <Card.Text>Exchange: {info.exchange}</Card.Text>
-              <Card.Text>
-                Market Capitalisation: {info.marketCapitalization}
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        
-        
-          <Card id="sharesCard">
-            <Card.Body className="companyShares">
-              <Card.Text>
-                <p className="outstandingShareTitle">
-                  Number of oustanding shares
-                </p>
-                <p className="outstandingShare">{info.shareOutstanding}</p>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        
+        <Card id="infoCard">
+          <Card.Body className="companyInfo">
+            <Card.Text>{info.name}</Card.Text>
+            <Card.Text>Country: {info.country}</Card.Text>
+            <Card.Text>Currency: {info.currency}</Card.Text>
+            <Card.Text>Exchange: {info.exchange}</Card.Text>
+            <Card.Text>
+              Market Capitalisation: {info.marketCapitalization}
+            </Card.Text>
+          </Card.Body>
+        </Card>
+
+        <Card id="sharesCard">
+          <Card.Body className="companyShares">
+            <Card.Text>
+              <p className="outstandingShareTitle">
+                Number of oustanding shares
+              </p>
+              <p className="outstandingShare">{info.shareOutstanding}</p>
+            </Card.Text>
+          </Card.Body>
+        </Card>
       </div>
       <HighStocksChart />
 
@@ -202,7 +219,7 @@ const SearchResults = () => {
           </Card.Body>
         </Card>
         <Col>
-        <NewsCarousel news={news} />
+          <NewsCarousel news={news} />
         </Col>
       </div>
     </>
