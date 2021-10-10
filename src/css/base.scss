@@ -1,15 +1,17 @@
 html {
   body {
+    .App {
+      width: 95vw;
+      margin: 1em auto;
+    }
+    .App > * {
+      margin-bottom: 1em;
+    }
     @include backgroundColour;
     font: 100% $font-stack;
     color: $primary-color;
     .row {
       margin-bottom: 2em;
-    }
-    .jumbotron {
-      background-color: $light-card-background;
-    // @include backgroundColour;
-      padding: 2rem 1rem;
     }
     .search-input {
       border: 1px solid #344050;
@@ -19,6 +21,9 @@ html {
         background-color: $focus-form-background;
         color: $primary-color;
       }
+    }
+    .form-label {
+      color: $light-card-background;
     }
     .react-datepicker-wrapper {
       width: 100%;
@@ -38,12 +43,12 @@ html {
     .carousel-item-prev {
       height: 25.4em;
       img {
-        border-radius: 0.3rem;
+        border-radius: $globalRadius;
         filter: brightness(35%);
       }
     }
     .highcharts-container {
-      border-radius: 0.3rem;
+      border-radius: $globalRadius;
     }
     .outstandingShare {
       text-align: center;
@@ -51,7 +56,52 @@ html {
     }
     .outstandingShareTitle {
       text-align: center;
-      padding: 4em 0 0 0;
+      margin-top: 2.5em;
+    }
+    #newsAndLinks {
+      display: flex;
+      > .col {
+        padding-right: 0;
+      }
+    }
+    .carousel.slide {
+      background: $light-card-background;
+      border-radius: $globalRadius;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .form-row,
+  #infoAndShares {
+    flex-direction: column;
+  }
+  .form-row .col:nth-child(1) {
+    margin-bottom: 1em;
+  }
+  #infoAndShares {
+    flex-direction: column;
+    width: 100%;
+    div#infoCard,
+    div#sharesCard {
+      width: 100%;
+    }
+    #infoCard {
+      margin-bottom: 1em;
+    }
+  }
+  #newsAndLinks {
+    flex-direction: column;
+    .card {
+      margin-bottom: 1em;
+      > a {
+        position: absolute;
+        right: 0;
+        margin: 1em;
+      }
+    }
+    .col {
+      padding: 0;
     }
   }
 }

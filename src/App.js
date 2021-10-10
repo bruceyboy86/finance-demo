@@ -8,9 +8,7 @@ import Container from 'react-bootstrap/Container';
 function App() {
   return (
     <div className="App">
-      <Container fluid="md">
-        <SearchResults />
-      </Container>
+      <SearchResults />
     </div>
   );
 }

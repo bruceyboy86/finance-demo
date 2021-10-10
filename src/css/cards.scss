@@ -1,16 +1,21 @@
-.card{
+#infoAndShares {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  #infoCard,
+  #sharesCard {
+    width: 48.8%;
+  }
+}
+.card {
   border: none;
   background-color: transparent;
-  .card-body{
-    border:1px solid $light-card-background;
+  .card-body {
+    border: 1px solid $light-card-background;
     border-radius: 0.3rem;
     background-color: $light-card-background;
-    &.companyInfo, &.companyShares {
-      position: relative;
-      top: 2em;
-    }
   }
-  .card-img-top{
+  .card-img-top {
     position: relative;
     margin-bottom: -5px;
   }

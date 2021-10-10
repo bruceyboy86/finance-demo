@@ -5,6 +5,8 @@ $card-background: #0e1c2f;
 $light-card-background: #132238;
 $focus-form-background: #223757;
 
+$globalRadius: 0.3rem;
+
 @mixin backgroundColour {
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
