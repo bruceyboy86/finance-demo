@@ -132,7 +132,7 @@ const SearchResults = () => {
         <Form>
           <Form.Row>
             <Col>
-              <Form.Label>Company id</Form.Label>
+              <Form.Label>Type a company id e.g. AAPL</Form.Label>
               <input
                 list="browsers"
                 name="browser"
