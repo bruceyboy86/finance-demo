@@ -1,10 +1,11 @@
 # Finance demo
 
-Originally created as a challenge for a job interview
+Originally created as a challenge for a job interview. It has since been slightly refactored and improved.
+I've split up some of the main components into their own respective files and removed some of the bootstrap dependencies.
+A build is now launched on [Vercel](https://finance-demo.vercel.app/) to show the progress.
+## Demonstration - click image for live demo
 
-## Example
-
-![cmptrshr](https://user-images.githubusercontent.com/4982761/90491244-935cba00-e137-11ea-85c3-34f6f9e1d5a2.gif)
+[![cmptrshr](https://user-images.githubusercontent.com/4982761/90491244-935cba00-e137-11ea-85c3-34f6f9e1d5a2.gif)](https://finance-demo.vercel.app/)
 
   
 ## Tech Stack
