@@ -1,0 +1,47 @@
+@media screen and (max-width: 575px) {
+  .form-row,
+  #infoAndShares,
+  #forms {
+    flex-direction: column;
+  }
+  #forms div.finInput{
+    width: unset;
+  }
+  .form-row .col:nth-child(1) {
+    margin-bottom: 1em;
+  }
+  #infoAndShares {
+    flex-direction: column;
+    width: 100%;
+    div#infoCard,
+    div#sharesCard {
+      width: 100%;
+    }
+    #infoCard {
+      margin-bottom: 1em;
+    }
+  }
+  #newsAndLinks {
+    flex-direction: column;
+    .card {
+      margin-bottom: 1em;
+      > a {
+        position: absolute;
+        right: 0;
+        margin: 1em;
+      }
+    }
+    .col {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 380px){
+  html{
+    font-size: 12px;
+    #newsAndLinks .card > a {
+      display: none;
+    }
+  }
+}

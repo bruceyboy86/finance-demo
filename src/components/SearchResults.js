@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import * as Highcharts from "highcharts/highstock";
 import HighchartsReact from "highcharts-react-official";
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import PriceCards from "./PriceCards";
 import NewsCarousel from "./NewsCarousel";
+import CompanyInput from "./CompanyInput";
+import CompanyDate from "./CompanyDate";
 
 const SearchResults = () => {
   const [data, setData] = useState({});
@@ -129,48 +129,8 @@ const SearchResults = () => {
   return (
     <>
       <div id="forms">
-        <Form>
-          <Form.Row>
-            <Col>
-              <Form.Label>Type a company id e.g. AAPL</Form.Label>
-              <input
-                list="browsers"
-                name="browser"
-                id="browser"
-                className="form-control rounded-pill search-input"
-                onChange={(e) => setQuery(e.target.value.toUpperCase())}
-              />
-              <datalist id="browsers">
-                <option value="AAPL"></option>
-                <option value="MSFT"></option>
-                <option value="AMZN"></option>
-                <option value="TSLA"></option>
-                <option value="GOOG"></option>
-                <option value="GOOGL"></option>
-                <option value="NVDA"></option>
-                <option value="FB"></option>
-                <option value="PYPL"></option>
-                <option value="NFLX"></option>
-                <option value="ADBE"></option>
-                <option value="CMCSA"></option>
-                <option value="CSCO"></option>
-                <option value="INTC"></option>
-                <option value="PEP"></option>
-                <option value="AVGO"></option>
-              </datalist>
-            </Col>
-            <Col>
-              <Form.Label>Week ending on ...</Form.Label>
-              <br />
-              <DatePicker
-                className="datePickerForm form-control"
-                selected={startDate}
-                value={startDate}
-                onChange={(date) => setStartDate(date)}
-              />
-            </Col>
-          </Form.Row>
-        </Form>
+        <CompanyInput setQuery={setQuery} />
+        <CompanyDate startDate={startDate} setStartDate={setStartDate} />
       </div>
 
       <div id="infoAndShares">

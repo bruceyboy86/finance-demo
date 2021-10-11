@@ -1,0 +1,22 @@
+#forms {
+  display: flex;
+  justify-content: space-between;
+  .finInput {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    input {
+      width: 100%;
+      border: 1px solid #344050;
+      background-color: #132238;
+      color: #c8baee;
+      border-radius: 50rem;
+      height: calc(1.5em + 0.75rem + 2px);
+      text-transform: capitalize;
+      padding-left: 1em;
+    }
+    label {
+      color: $light-card-background;
+    }
+  }
+}

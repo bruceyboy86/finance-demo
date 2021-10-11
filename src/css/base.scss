@@ -23,22 +23,6 @@ html {
         color: $primary-color;
       }
     }
-    .form-label {
-      color: $light-card-background;
-    }
-    .react-datepicker-wrapper {
-      width: 100%;
-      .datePickerForm {
-        border: 1px solid #344050;
-        background-color: $light-card-background;
-        color: $primary-color;
-        border-radius: 50rem;
-        &:focus {
-          background-color: $focus-form-background;
-          color: $primary-color;
-        }
-      }
-    }
     .active.carousel-item,
     .carousel-item-next,
     .carousel-item-prev {
@@ -68,41 +52,6 @@ html {
     .carousel.slide {
       background: $light-card-background;
       border-radius: $globalRadius;
-    }
-  }
-}
-
-@media screen and (max-width: 575px) {
-  .form-row,
-  #infoAndShares {
-    flex-direction: column;
-  }
-  .form-row .col:nth-child(1) {
-    margin-bottom: 1em;
-  }
-  #infoAndShares {
-    flex-direction: column;
-    width: 100%;
-    div#infoCard,
-    div#sharesCard {
-      width: 100%;
-    }
-    #infoCard {
-      margin-bottom: 1em;
-    }
-  }
-  #newsAndLinks {
-    flex-direction: column;
-    .card {
-      margin-bottom: 1em;
-      > a {
-        position: absolute;
-        right: 0;
-        margin: 1em;
-      }
-    }
-    .col {
-      padding: 0;
     }
   }
 }
